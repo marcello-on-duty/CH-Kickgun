@@ -10,7 +10,6 @@ Shoot at a player and it will kick them with the reason you entered.
 * This resource is working with ESX and Ace Perms.
 * A lot of options in the config.lua
 * Anti trigger (will print the modders name in the console when they dont have the right permissions).
-* This resource is using the Asset Escrow system (only config.lua accessibility) .
 * Resmon idle 0.0ms.
 * Resmon with all the options turn on and /kickgun is active: 0.06ms.
 * Resmon with top-left warning off and /kickgun is active: 0.03ms.
