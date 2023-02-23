@@ -12,7 +12,7 @@ CH.ServerName = "SERVERNAME"
 CH.AdminNameOnKick = "⚪ Admin:"
 CH.KickReason = "⚪ Reason:"
 CH.KickDate = "⚪ Date:"
-CH.NoAccesToKickgun = "You dont have permissions for this"
+CH.NoAccesToKickgun = "You dont have permissions for this command"
 CH.KickgunActiveMessage = "Kickgun ~g~ON~s~!"
 CH.KickGunInactiveMessage = "Kickgun ~b~OFF~s~!"
 
