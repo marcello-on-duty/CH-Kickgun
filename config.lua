@@ -1,8 +1,5 @@
 CH = {}
 
--- Will print in the console that CH-Kickgun is ready for use (standard true).
-CH.ConsoleAnnoune = true
-
 -- This will be the ACE Perms name for your group(s).
 CH.AcePermsName = "CH.Kickgun"
 

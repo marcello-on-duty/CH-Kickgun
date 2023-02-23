@@ -17,13 +17,3 @@ AddEventHandler("ch_kickgun:kick", function(kickID, kickREDEN)
         print(GetPlayerName(source).." tried to trigger the kickgun but has no permissions")
     end
 end)
-
-AddEventHandler('onResourceStart', function(resourceName)
-    if (GetCurrentResourceName() ~= resourceName) then
-      return
-    end
-    Wait(5000)
-    if CH.ConsoleAnnoune == true then
-      print("[^1Announce^0] : Kickgun has been loaded ^2successfully^0")
-    end
-  end)
