@@ -48,41 +48,41 @@ end
 
 
 RegisterCommand(CH.KickgunCommand, function(source, args, rawCommand)
-        checkRole()
-        if allowed == true then
-		
-		for i,theArg in pairs(args) do
-			if i ~= 0 then
-				reden = reden.." "..theArg
-			end
-		end
-           if chkickgun == false then
-                chkickgun = true
-                sendM(CH.KickgunActiveMessage)
-				Citizen.Wait(1)
-				local playerPed = PlayerPedId()
-				SetCanAttackFriendly(playerPed, true, true)
-            else
-                chkickgun = false
-                sendM(CH.KickGunInactiveMessage)
-				reden = ""
-				local playerPed = PlayerPedId()
-				SetCanAttackFriendly(playerPed, false, false)
-            end
-        else
-            sendM(CH.NoAccesToKickgun)
+    checkRole()
+    if allowed == true then
+      
+      for i,theArg in pairs(args) do
+         if i ~= 0 then
+            reden = reden.." "..theArg
         end
+    end
+    if chkickgun == false then
+        chkickgun = true
+        sendM(CH.KickgunActiveMessage)
+        Citizen.Wait(1)
+        local playerPed = PlayerPedId()
+        SetCanAttackFriendly(playerPed, true, true)
+    else
+        chkickgun = false
+        sendM(CH.KickGunInactiveMessage)
+        reden = ""
+        local playerPed = PlayerPedId()
+        SetCanAttackFriendly(playerPed, false, false)
+    end
+else
+    sendM(CH.NoAccesToKickgun)
+end
 end, false)
 
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
-          if chkickgun and CH.KickgunWarning == true then
-            DisplayHelpText("~h~!~s~ ".. CH.KickgunWarningMessage .." ".. reden)
-          elseif chkickgun == false then
+        if chkickgun and CH.KickgunWarning == true then
+            DisplayHelpText("~h~!~s~ ".. CH.KickgunWarningMessage .."".. reden)
+        elseif chkickgun == false then
             Citizen.Wait(2500)
-          end 
-        end    
+        end 
+    end    
 end)
 
 Citizen.CreateThread(function()
@@ -91,18 +91,18 @@ Citizen.CreateThread(function()
         if chkickgun then
             if IsPlayerFreeAiming(PlayerId()) then
                 local entity = getEntity(PlayerId())
-				local entityowner = NetworkGetEntityOwner(entity)
-				local ownerid = GetPlayerServerId(entityowner)
-				local ownername = GetPlayerName(entityowner)
-				local kickREDEN = reden
-				if GetEntityType(entity) == 1 then
-					if aimCheck(GetPlayerPed(-1)) then
-						TriggerServerEvent("ch_kickgun:kick", ownerid, kickREDEN)
-                    end
-					end
-				end
-            elseif chkickgun == false then
-                 Citizen.Wait(600)
-                 end
-    end
+                local entityowner = NetworkGetEntityOwner(entity)
+                local ownerid = GetPlayerServerId(entityowner)
+                local ownername = GetPlayerName(entityowner)
+                local kickREDEN = reden
+                if GetEntityType(entity) == 1 then
+                   if aimCheck(GetPlayerPed(-1)) then
+                      TriggerServerEvent("ch_kickgun:kick", ownerid, kickREDEN)
+                  end
+              end
+          end
+      elseif chkickgun == false then
+       Citizen.Wait(600)
+   end
+end
 end)
