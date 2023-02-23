@@ -17,7 +17,7 @@ Shoot at a player and it will kick them with the reason you entered.
 
 **Standard Command:**
 /kickgun [reason]
-*use /kickgun again to turn off kickgun.*
+*Use /kickgun again to turn off kickgun.*
 Example: 
 ```
 /kickgun Using bad words! Read our server rules before you join us back!
