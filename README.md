@@ -1,6 +1,6 @@
 ![kickgunpreviewbig|690x388](https://cdn.discordapp.com/attachments/1078248796896641145/1078248930850119721/96b94b41b6d2c3c4e84645f77ec77392b082caa6.jpg)
-# Kickgun 
-
+# Kickgun for FiveM
+### Video Showcase: [YouTube - Kickgun ](https://www.youtube.com/watch?v=aAeXMfHLKKg)
 
 Want to kick players in style? now its possible with the kickgun!
 Shoot at a player and it will kick them with the reason you entered.
@@ -30,9 +30,5 @@ This Resource is using Ace perms, you can change the name in the config.
 add_principal identifier.discord:YOURDISCORDID group.admin 
 add_ace group.admin CH.Kickgun allow
 ```
-
-|                                         |                                |
-|-------------------------------------|----------------------------|
-Video Showcase: [YouTube - Kickgun ](https://www.youtube.com/watch?v=aAeXMfHLKKg)
 
 
