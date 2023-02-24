@@ -9,8 +9,9 @@ Shoot at a player and it will kick them with the reason you entered.
 * Easy configuration with instructions in config.lua
 * Works with al shooting guns.
 * This resource is working with ESX and Ace Perms.
-* Anti trigger (will print the modders name in the console when they dont have the right permissions).
-* Client resmon idle 0.0ms.
+* Anti trigger (will print the name of the player in the console when they dont have the right permissions).
+* Player dont take damage when they get kicked.
+* Client resmon idle: 0.0ms.
 * Client resmon when /kickgun is active: 0.06ms.
 
 **Standard Command:**
