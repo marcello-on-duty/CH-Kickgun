@@ -1,4 +1,4 @@
-![kickgunpreviewbig|690x388](https://cdn.discordapp.com/attachments/1078248796896641145/1078248930850119721/96b94b41b6d2c3c4e84645f77ec77392b082caa6.jpg)
+![kickgunpreviewbig|690x388](https://cdn.discordapp.com/attachments/1078248796896641145/1078424012285296751/FreeKickgun.png)
 # Kickgun for FiveM
 ### Video Showcase: [YouTube - Kickgun ](https://www.youtube.com/watch?v=aAeXMfHLKKg)
 *Video is outdated, will be updated soon.*
