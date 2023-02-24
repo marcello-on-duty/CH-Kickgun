@@ -2,7 +2,7 @@ fx_version 'adamant'
 game 'gta5'
 author 'YoCazza#0001'
 description 'Kicking players with a Kickgun!'
-version '1.1'
+version '1.2'
 lua54 'yes'
 
 client_scripts {
