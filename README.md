@@ -10,8 +10,8 @@ Shoot at a player and it will kick them with the reason you entered.
 * Works with al shooting guns.
 * This resource is working with ESX and Ace Perms.
 * Anti trigger (will print the modders name in the console when they dont have the right permissions).
-* Resmon idle 0.0ms.
-* Resmon with all the options turn on and /kickgun is active: 0.06ms.
+* Client resmon idle 0.0ms.
+* Client resmon when /kickgun is active: 0.06ms.
 
 **Standard Command:**
 /kickgun [reason]
