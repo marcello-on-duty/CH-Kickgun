@@ -22,7 +22,7 @@ Example:
 ```
 
 **How to use:**
-This Resource is using Ace perms, you can change the name in the config.
+This Resource is using Ace Perms, you can change the name in the config.
 ```lua
 -- this is an example for permission setup
 add_principal identifier.discord:YOURDISCORDID group.admin 
