@@ -6,6 +6,7 @@ local useAce = "true"
 local reden = ""
 local CHDelay = 0
 local CHrunning = false
+local playerPed = PlayerPedId()
 
 Citizen.CreateThread(function()
     if useAce == "true" then
@@ -42,7 +43,8 @@ local function aimCheck(player)
     end
 end
 
-function DisplayHelpText(str)
+-- This is your top-left infobox
+function InfoBox(str)
 	SetTextComponentFormat("STRING")
 	AddTextComponentString(str)
 	DisplayHelpTextFromStringLabel(0, 0, 0, -1)
@@ -73,13 +75,11 @@ if chkickgun == false then
     chkickgun = true
     sendM(CH.KickgunActiveMessage)
     Citizen.Wait(1)
-    local playerPed = PlayerPedId()
     SetCanAttackFriendly(playerPed, true, true)
 else
     chkickgun = false
     sendM(CH.KickGunInactiveMessage)
     reden = ""
-    local playerPed = PlayerPedId()
     SetCanAttackFriendly(playerPed, false, false)
 end
 else
@@ -91,19 +91,18 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
         if chkickgun and CH.KickgunDelay == false then
-            DisplayHelpText("~BLIP_INFO_ICON~~s~ ".. CH.KickgunWarningMessage .."".. reden)
+            InfoBox("~BLIP_INFO_ICON~~s~ ".. CH.KickgunWarningMessage .."".. reden)
         elseif chkickgun and CH.KickgunDelay == true then
             if CHrunning == true then
-                DisplayHelpText("~BLIP_INFO_ICON~~s~ ".. CH.KickgunWarningMessage .."".. reden .."~n~".. CH.KickGunDelayMessage .." ".. CHDelay) 
+                InfoBox("~BLIP_INFO_ICON~~s~ ".. CH.KickgunWarningMessage .."".. reden .."~n~".. CH.KickGunDelayMessage .." ".. CHDelay) 
             else
-                DisplayHelpText("~BLIP_INFO_ICON~~s~ ".. CH.KickgunWarningMessage .."".. reden .."~n~".. CH.KickGunDelayMessage .." ".. CH.KickgunDelayReady) 
+                InfoBox("~BLIP_INFO_ICON~~s~ ".. CH.KickgunWarningMessage .."".. reden .."~n~".. CH.KickGunDelayMessage .." ".. CH.KickgunDelayReady) 
             end
         elseif chkickgun == false then
             Citizen.Wait(200)
-        end 
+        end
     end
 end)
-
 
 Citizen.CreateThread(function()
     while true do
@@ -130,7 +129,7 @@ Citizen.CreateThread(function()
         end
     end
 elseif chkickgun == false then
-   Citizen.Wait(600)
+   Citizen.Wait(200)
 end
 end
 end)
