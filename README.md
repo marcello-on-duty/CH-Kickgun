@@ -3,6 +3,7 @@
 
 # Kickgun for FiveM [(Showcase on YouTube)](https://www.youtube.com/watch?v=aAeXMfHLKKg)
 
+
 Want to kick players in style? now its possible with the kickgun!
 
 Shoot at a player and it will kick them with the reason you entered.
@@ -55,6 +56,10 @@ add_ace group.admin CH.Kickgun allow
 
 
 *[The YouTube video](https://www.youtube.com/watch?v=aAeXMfHLKKg) does not show the new delay function, this wil be updated soon.*
+
+|                                     |                                |
+|-------------------------------------|----------------------------|
+| Latest release      | [v1.3](https://github.com/YoCazza/CH-Kickgun/releases)                 |
 
 
 

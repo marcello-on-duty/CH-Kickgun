@@ -7,13 +7,12 @@ AddEventHandler("ch_kickgun:checkRole", function()
     end
 end)
 
-
 RegisterServerEvent("ch_kickgun:kick")
 AddEventHandler("ch_kickgun:kick", function(kickID, kickREDEN)
     if IsPlayerAceAllowed(source, CH.AcePermsName) then
         local tijd = os.date("%d/%m/%Y %X")
         DropPlayer(kickID, CH.KickMessage..' '.. CH.ServerName ..'\n'.. CH.AdminNameOnKick ..' '..GetPlayerName(source)..'\n '.. CH.KickReason ..' '..kickREDEN..'\n' .. CH.KickDate ..' '.. tijd)
     else
-        print("[^1WARNING^0] "..GetPlayerName(source).." tried to trigger the kickgun but has no permissions")
+        print("[^1WARNING^0] "..GetPlayerName(source).." tried to trigger the kickgun but has no permissions.")
     end
 end)
