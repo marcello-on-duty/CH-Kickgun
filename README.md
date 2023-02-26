@@ -54,13 +54,11 @@ add_ace group.admin CH.Kickgun allow
 
 ![image|620x388](https://cdn.discordapp.com/attachments/1078248796896641145/1078332636386312344/image.png)
 
-
 *[The YouTube video](https://www.youtube.com/watch?v=aAeXMfHLKKg) does not show the new delay function, this wil be updated soon.*
 
-|                                     |                                |
-|-------------------------------------|----------------------------|
-| Latest release      | [v1.3](https://github.com/YoCazza/CH-Kickgun/releases)                 |
-
+| Kickgun       | Version |
+| ----------- | ----------- |
+| Latest      | [v1.3](https://github.com/YoCazza/CH-Kickgun/releases/tag/v1.3)       |
 
 
 
