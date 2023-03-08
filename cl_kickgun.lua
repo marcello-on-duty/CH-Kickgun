@@ -1,17 +1,10 @@
 local chkickgun = false
 local allowed = false
 local passAce = false
-local onAim = "false" -- Dont change, this wil kick the player on aiming!
-local useAce = "true" -- If you set this to false, everyone can use this resource (standard true).
 local reden = ""
-local CHDelay = 0
-local CHrunning = false
-local playerPed = PlayerPedId()
 
 Citizen.CreateThread(function()
-    if useAce == "true" then
-        TriggerServerEvent("ch_kickgun:checkRole")
-    end
+    TriggerServerEvent("ch_kickgun:checkRole")
 end)
 
 RegisterNetEvent("ch_kickgun:returnCheck")
@@ -20,10 +13,6 @@ AddEventHandler("ch_kickgun:returnCheck", function(check)
 end)
 
 local function checkRole()
-    if useAce == "false" then
-        allowed = true
-        return allowed
-    end
     if passAce == true then
         allowed = true
         return allowed
@@ -33,14 +22,6 @@ end
 local function getEntity(player)
 	local _, entity = GetEntityPlayerIsFreeAimingAt(player)
 	return entity
-end
-
-local function aimCheck(player)
-    if onAim == "true" then
-        return true
-    else
-        return IsPedShooting(player)
-    end
 end
 
 -- Infobox function
@@ -58,6 +39,8 @@ function sendM(text)
 end
 
 -- Countdown function
+local CHDelay = 0
+local CHrunning = false
 function StartCountDown()
     CHrunning = true
     Citizen.CreateThread(function()
@@ -83,12 +66,10 @@ RegisterCommand(CH.KickgunCommand, function(source, args, rawCommand)
         chkickgun = true
         sendM(CH.KickgunActiveMessage)
         Citizen.Wait(1)
-        SetCanAttackFriendly(playerPed, true, true)
     else
         chkickgun = false
         sendM(CH.KickGunInactiveMessage)
         reden = ""
-        SetCanAttackFriendly(playerPed, false, false)
     end
 else
     sendM(CH.NoAccesToKickgun)
@@ -101,7 +82,7 @@ Citizen.CreateThread(function()
         if chkickgun and CH.KickgunDelay == false then
             InfoBox(CH.KickGunInfoboxIcon .."~s~ ".. CH.KickgunWarningMessage .."".. reden)
         elseif chkickgun and CH.KickgunDelay == true then
-            if CHrunning == true then
+            if CHrunning then
                 InfoBox(CH.KickGunInfoboxIcon .."~s~ ".. CH.KickgunWarningMessage .."".. reden .."~n~".. CH.KickGunDelayMessage .." ".. CHDelay) 
             else
                 InfoBox(CH.KickGunInfoboxIcon .."~s~ ".. CH.KickgunWarningMessage .."".. reden .."~n~".. CH.KickGunDelayMessage .." ".. CH.KickgunDelayReady) 
@@ -123,7 +104,7 @@ Citizen.CreateThread(function()
                 local ownername = GetPlayerName(entityowner)
                 local kickREDEN = reden
                 if GetEntityType(entity) == 1 then
-                 if aimCheck(GetPlayerPed(-1)) then
+                 if IsPedShooting(GetPlayerPed(-1)) then
                    if CH.KickgunDelay == true and CHDelay == 0 then
                       TriggerServerEvent("ch_kickgun:kick", ownerid, kickREDEN)
                       CHDelay = CH.KickgunDelaySeconds
