@@ -26,9 +26,9 @@ end
 
 -- Infobox function
 function InfoBox(str)
-	SetTextComponentFormat("STRING")
-	AddTextComponentString(str)
-	DisplayHelpTextFromStringLabel(0, 0, 0, -1)
+AddTextEntry('HelpMsg', str)
+BeginTextCommandDisplayHelp('HelpMsg')
+EndTextCommandDisplayHelp(0, false, false, -1)
 end
 
 -- Notification function
@@ -79,15 +79,15 @@ end, false)
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
-        if chkickgun and CH.KickgunDelay == false then
+        if chkickgun and not CH.KickgunDelay then
             InfoBox(CH.KickGunInfoboxIcon .."~s~ ".. CH.KickgunWarningMessage .."".. reden)
-        elseif chkickgun and CH.KickgunDelay == true then
+        elseif chkickgun and CH.KickgunDelay then
             if CHrunning then
                 InfoBox(CH.KickGunInfoboxIcon .."~s~ ".. CH.KickgunWarningMessage .."".. reden .."~n~".. CH.KickGunDelayMessage .." ".. CHDelay) 
             else
                 InfoBox(CH.KickGunInfoboxIcon .."~s~ ".. CH.KickgunWarningMessage .."".. reden .."~n~".. CH.KickGunDelayMessage .." ".. CH.KickgunDelayReady) 
             end
-        elseif chkickgun == false then
+        elseif not chkickgun then
             Citizen.Wait(200)
         end
     end
@@ -104,12 +104,12 @@ Citizen.CreateThread(function()
                 local ownername = GetPlayerName(entityowner)
                 local kickREDEN = reden
                 if GetEntityType(entity) == 1 then
-                 if IsPedShooting(GetPlayerPed(-1)) then
-                   if CH.KickgunDelay == true and CHDelay == 0 then
+                 if IsPedShooting(PlayerPedId()) then
+                   if CH.KickgunDelay and CHDelay == 0 then
                       TriggerServerEvent("ch_kickgun:kick", ownerid, kickREDEN)
                       CHDelay = CH.KickgunDelaySeconds
                       StartCountDown()
-                  elseif CH.KickgunDelay == false then
+                  elseif not CH.KickgunDelay then
                    TriggerServerEvent("ch_kickgun:kick", ownerid, kickREDEN)
                else
                 sendM(CH.KickGunDelayCantKick1 .." "..CHDelay.." ".. CH.KickGunDelayCantKick2)
@@ -117,7 +117,7 @@ Citizen.CreateThread(function()
         end
     end
 end
-elseif chkickgun == false then
+elseif not chkickgun then
  Citizen.Wait(200)
 end
 end
