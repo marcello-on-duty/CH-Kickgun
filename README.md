@@ -59,9 +59,9 @@ add_ace group.admin CH.Kickgun allow
 
 | Kickgun       | Version |
 | ----------- | ----------- |
-| Latest      | [v1.3](https://github.com/YoCazza/CH-Kickgun/releases/tag/v1.3)       |
+| Latest      | [v1.4](https://github.com/YoCazza/CH-Kickgun/releases/tag/v1.4)       |
 
-*Dont re-upload any (edited) version of CH-Kickgun without permissions*
+*Dont re-upload or sell any (edited) version of CH-Kickgun without permissions.*
 
 
 
