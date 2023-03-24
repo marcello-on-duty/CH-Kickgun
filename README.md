@@ -12,9 +12,8 @@ Shoot at a player and it will kick them with the reason you entered.
 * Delay options
 * Language options
 * Works with al shooting guns.
-* Anti trigger (will print the name of the player in the console when they dont have the right permission).
+* Anti server trigger (if a hacker triggers the server event).
 ![image|835x26](https://media.discordapp.net/attachments/1078248796896641145/1082231535891132466/image.png)
-* Player dont take damage when they get kicked.
 * Client resmon idle: 0.0ms.
 * Client resmon when /kickgun is active: 0.06ms.
 * **This resource is working with ESX and Ace Perms.**
