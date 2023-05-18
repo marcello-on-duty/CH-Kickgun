@@ -1,4 +1,4 @@
-![kickgunpreviewbig|690x388](https://cdn.discordapp.com/attachments/1078248796896641145/1078424012285296751/FreeKickgun.png)
+![kickgunpreviewbig|690x388](https://cdn.discordapp.com/attachments/1108674283716227102/1108676087153696840/youtube-banner-generator-featuring-a-tiktok-clipart-button-2740cc-5059_4.png)
 
 
 # Kickgun for FiveM [(Showcase on YouTube)](https://www.youtube.com/watch?v=aAeXMfHLKKg)
@@ -47,12 +47,6 @@ add_principal identifier.discord:YOURDISCORDID group.admin
 add_ace group.admin CH.Kickgun allow
 
 ```
-
-## Screenshot(s):
-
-![image|690x388](https://cdn.discordapp.com/attachments/1078248796896641145/1078313332043419668/image.png)
-
-![image|620x388](https://cdn.discordapp.com/attachments/1078248796896641145/1078332636386312344/image.png)
 
 *[The YouTube video](https://www.youtube.com/watch?v=aAeXMfHLKKg) does not show the new delay function, this wil be updated soon.*
 
