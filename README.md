@@ -1,4 +1,4 @@
-![kickgunpreviewbig|690x388](https://cdn.discordapp.com/attachments/1108674283716227102/1108676087153696840/youtube-banner-generator-featuring-a-tiktok-clipart-button-2740cc-5059_4.png)
+![kickgunpreviewbig|690x388](https://media.discordapp.net/attachments/1115592251767271457/1115592507259109496/kickgun_banner.png?width=1193&height=671)
 
 
 # Kickgun for FiveM [(Showcase on YouTube)](https://www.youtube.com/watch?v=aAeXMfHLKKg)
@@ -13,7 +13,6 @@ Shoot at a player and it will kick them with the reason you entered.
 * Language options
 * Works with al shooting guns.
 * Anti server trigger (if a hacker triggers the server event).
-![image|835x26](https://media.discordapp.net/attachments/1078248796896641145/1082231535891132466/image.png)
 * Client resmon idle: 0.0ms.
 * Client resmon when /kickgun is active: 0.06ms.
 * **This resource is working with ESX and Ace Perms.**
@@ -31,8 +30,6 @@ Example:
 /kickgun Using bad words! Please read our server rules before you join us back!
 
 ```
-
-
 
 **How to use:**
 
