@@ -31,6 +31,8 @@ Example:
 
 ```
 
+**What the player see when kicked:**
+![kickmessage|690x388](https://media.discordapp.net/attachments/1115592251767271457/1115919689093226556/image.png)
 **How to use:**
 
 This Resource is using Ace Perms, you can change the name in the config.
