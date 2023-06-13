@@ -47,13 +47,8 @@ add_ace group.admin CH.Kickgun allow
 
 ```
 
-*[The YouTube video](https://www.youtube.com/watch?v=aAeXMfHLKKg) does not show the new delay function, this wil be updated soon.*
+*[The YouTube video](https://www.youtube.com/watch?v=aAeXMfHLKKg) does not show the new delay function, maybe i will upload a updated video soon.
 
-| Kickgun       | Version |
-| ----------- | ----------- |
-| Latest      | [v1.4](https://github.com/YoCazza/CH-Kickgun/releases/tag/v1.4)       |
-
-*Dont re-upload or sell any (edited) version of CH-Kickgun without permissions.*
 
 
 
