@@ -37,5 +37,5 @@ CH.KickGunInfoboxIcon = "~BLIP_INFO_ICON~" -- All the icons / inputs: https://pa
 --╚═════╝░╚══════╝╚══════╝╚═╝░░╚═╝░░░╚═╝░░░
 -- You can set a delay when a staff member kicks a player, this delay starts as soon as you have kicked a player and wil display this in the top-left infobox.
 CH.KickgunDelay = true
-CH.KickgunDelaySeconds = 10
+CH.KickgunDelaySeconds = 5
 CH.KickgunDelayReady = "Ready for use"
