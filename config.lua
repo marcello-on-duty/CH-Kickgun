@@ -1,41 +1,25 @@
-CH = {}
+CH = {
+    -- Ace perms and command
+    AcePermsName = "CH.Kickgun",
+    KickgunCommand = "kickgun",
 
---░██████╗░███████╗███╗░░██╗███████╗██████╗░░█████╗░██╗░░░░░
---██╔════╝░██╔════╝████╗░██║██╔════╝██╔══██╗██╔══██╗██║░░░░░
---██║░░██╗░█████╗░░██╔██╗██║█████╗░░██████╔╝███████║██║░░░░░
---██║░░╚██╗██╔══╝░░██║╚████║██╔══╝░░██╔══██╗██╔══██║██║░░░░░
---╚██████╔╝███████╗██║░╚███║███████╗██║░░██║██║░░██║███████╗
---░╚═════╝░╚══════╝╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝
-CH.AcePermsName = "CH.Kickgun"
-CH.KickgunCommand = "kickgun"
+    -- Language
+    KickMessage = "⚪ You are kicked from",
+    ServerName = "SERVERNAME",
+    AdminNameOnKick = "⚪ Admin:",
+    KickReason = "⚪ Reason:",
+    KickDate = "⚪ Date:",
+    NoAccesToKickgun = "You dont have permissions for this command",
+    KickgunActiveMessage = "Kickgun ~g~ON~s~!",
+    KickGunInactiveMessage = "Kickgun ~b~OFF~s~!",
+    KickGunDelayMessage = "Delay:",
+    KickGunDelayCantKick1 = "You have to wait ~o~",
+    KickGunDelayCantKick2 = "seconds~s~ to kick a player again",
+    KickgunWarningMessage = "The Kickgun is ~g~active!~s~~n~Reason:",
+    KickGunInfoboxIcon = "~BLIP_INFO_ICON~",
 
---██╗░░░░░░█████╗░███╗░░██╗░██████╗░██╗░░░██╗░█████╗░░██████╗░███████╗
---██║░░░░░██╔══██╗████╗░██║██╔════╝░██║░░░██║██╔══██╗██╔════╝░██╔════╝
---██║░░░░░███████║██╔██╗██║██║░░██╗░██║░░░██║███████║██║░░██╗░█████╗░░
---██║░░░░░██╔══██║██║╚████║██║░░╚██╗██║░░░██║██╔══██║██║░░╚██╗██╔══╝░░
---███████╗██║░░██║██║░╚███║╚██████╔╝╚██████╔╝██║░░██║╚██████╔╝███████╗
---╚══════╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░░╚═════╝░╚═╝░░╚═╝░╚═════╝░╚══════╝
-CH.KickMessage = "⚪ You are kicked from"
-CH.ServerName = "SERVERNAME"
-CH.AdminNameOnKick = "⚪ Admin:"
-CH.KickReason = "⚪ Reason:"
-CH.KickDate = "⚪ Date:"
-CH.NoAccesToKickgun = "You dont have permissions for this command"
-CH.KickgunActiveMessage = "Kickgun ~g~ON~s~!"
-CH.KickGunInactiveMessage = "Kickgun ~b~OFF~s~!"
-CH.KickGunDelayMessage = "Delay:"
-CH.KickGunDelayCantKick1 = "You have to wait ~o~"
-CH.KickGunDelayCantKick2 = "seconds~s~ to kick a player again"
-CH.KickgunWarningMessage = "The Kickgun is ~g~active!~s~~n~Reason:"
-CH.KickGunInfoboxIcon = "~BLIP_INFO_ICON~" -- All the icons / inputs: https://pastebin.com/nqNYWMSB
-
---██████╗░███████╗██╗░░░░░░█████╗░██╗░░░██╗
---██╔══██╗██╔════╝██║░░░░░██╔══██╗╚██╗░██╔╝
---██║░░██║█████╗░░██║░░░░░███████║░╚████╔╝░
---██║░░██║██╔══╝░░██║░░░░░██╔══██║░░╚██╔╝░░
---██████╔╝███████╗███████╗██║░░██║░░░██║░░░
---╚═════╝░╚══════╝╚══════╝╚═╝░░╚═╝░░░╚═╝░░░
--- You can set a delay when a staff member kicks a player, this delay starts as soon as you have kicked a player and wil display this in the top-left infobox.
-CH.KickgunDelay = true
-CH.KickgunDelaySeconds = 5
-CH.KickgunDelayReady = "Ready for use"
+    -- Kick delay function
+    KickgunDelay = true,
+    KickgunDelaySeconds = 5,
+    KickgunDelayReady = "Ready for use"
+}
