@@ -56,10 +56,8 @@ end
 RegisterCommand(CH.KickgunCommand, function(source, args, rawCommand)
     checkRole()
     if allowed then
-        for i, theArg in pairs(args) do
-            if i ~= 0 then
-                reden = reden .. " " .. theArg
-            end
+        for i=1, #args do
+        	reden = reden .. " " .. args[i]
         end
         chkickgun = not chkickgun
         sendM(chkickgun and CH.KickgunActiveMessage or CH.KickGunInactiveMessage)
